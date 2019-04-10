@@ -2,6 +2,10 @@ const { copy } = require('./copyfile');
 const fsPromises = require('fs').promises;
 
 describe('copy file', () => {
+//   afterEach(() => {
+//     return fsPromises.unlink('newfiles.js');
+//   });
+
   it('copies a file and returns the promise', () => {
     copy('files.js', 'newfiles.js')
       .then(() => {
