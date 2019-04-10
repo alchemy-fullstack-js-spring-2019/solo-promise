@@ -3,19 +3,18 @@ const fsPromises = require('fs').promises;
 function transform(src) {
   return fsPromises.readFile(src, 'utf8')
     .then(data => {
-      console.log('DATA HERE:', data);
-      const pattern = /[A-Z\s]+/;
-      return data.slice(pattern);
+      const pattern = /[a-z]+/g;
+      const match = data.match(pattern);
+      const lowercaseString = match.join(' ');
+      return lowercaseString;
     })
     .then(data => {
-      console.log('SLICED STRING', data);
-      data.toUpperCase();
+      const uppercaseString = data.toUpperCase();
+      return uppercaseString;
     })
     .then(data => {
       const splitDataArray = data.split('');
-      console.log(splitDataArray);
       const reversedDataArray = splitDataArray.reverse();
-      console.log(reversedDataArray);
       return reversedDataArray.join('');
     });
 }
