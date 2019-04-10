@@ -22,10 +22,12 @@ Promise.all([ //waits for all and gives array of refurned values
   fsPromises.readFile('package.json', 'utf8'),
 ])
   .then(([promisesMd, filesJS, packageJson]) => {
-      console.log(promisesMD);
-  }
-//   .then(files => console.log(files[0]));
+    console.log(promisesMd);
+    console.log(filesJS);
+    console.log(packageJson);
+    //or .then(files => console.log(files[0]));
+    // Promise.resolve(1)
+    //   .then(console.log);
+    //   this promise will always resolve with 1;
+  });
 
-// Promise.resolve(1)
-//   .then(console.log);
-  //this promise will always resolve with;

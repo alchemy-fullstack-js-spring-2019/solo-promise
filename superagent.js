@@ -1,5 +1,5 @@
 const request = require('superagent');
-const fsPromises = require('fs').promises;
+// const fsPromises = require('fs').promises;
 
 // var superA = new request();
 // request.get('http://futuramaapi.herokuapp.com/api/quotes/3')
