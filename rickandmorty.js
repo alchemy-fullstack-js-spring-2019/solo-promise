@@ -1,18 +1,16 @@
-const fs = require('fs');
 const request = require('superagent');
 
 function getCharacter(id) {
-  return new Promise((resolve, reject) => {
-    request.get(`https://rickandmortyapi.com/api/character/${id}'`)
-      .then(res => {
-        return {
-          name: res.body.name,
-          status: res.body.status,
-          species: res.body.species 
-        };
-      });
-    resolve();
-  });
+
+  return request.get(`https://rickandmortyapi.com/api/character/${id}`)
+    .then(res => {
+      const results = {
+        name: res.body.name,
+        status: res.body.status,
+        species: res.body.species 
+      };
+      return results;
+    });
 }
 
 module.exports = getCharacter;
