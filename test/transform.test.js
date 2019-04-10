@@ -6,7 +6,7 @@ describe('transform function', () => {
         return transform(src)
             .then(data => {
                 console.log(data);
-                expect(data).toEqual('IH');
+                expect(data).toEqual('\nIH');
             });
     });
 });
