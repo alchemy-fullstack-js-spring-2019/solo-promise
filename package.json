@@ -24,6 +24,7 @@
     "jest": "^24.7.1"
   },
   "dependencies": {
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "superagent": "^5.0.2"
   }
 }

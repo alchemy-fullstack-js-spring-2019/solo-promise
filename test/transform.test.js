@@ -4,7 +4,7 @@ describe('Transform function', () => {
   it('transform using promise', () => {
     const src = './write1.txt';
     
-    transform(src)
+    return transform(src)
       .then(result => {
         expect(result).toEqual('\nEREH I');
       })

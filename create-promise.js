@@ -17,4 +17,4 @@ const src = './1_promises.md';
 
 readPromise(src)
   .then(data => console.log(data))
-  .catch(err => console.error(, err));
+  .catch(err => console.error(err));
