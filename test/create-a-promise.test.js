@@ -6,7 +6,7 @@ describe('see if read filePromise works', ()=>{
 
         return readFilePromise('../copy-file.test.txt')
             .then(data=>{
-                expect(data).toBeAnyString()
+                expect(data).toEqual('hi\n');
             })
 
     })

@@ -1,7 +1,7 @@
 describe('transformer function' , ()=>{
     it('reads a fileand transforms it', ()=>{
         return transformer('./test.txt')
-        .then(transformerData =>{
+        .then(transformedData =>{
             expect(transformedData).toEqual('\nIH');
         });
     });
