@@ -13,3 +13,5 @@ readFilePromise('./newFile.txt')
   .then(data => console.log('success', data))
   .catch(err => console.error('error', err));
 
+
+module.exports = readFilePromise;
