@@ -1,6 +1,6 @@
 const { getCharacter } = require('../lib/rickAndMortyApi');
 
-jest.mock('../../lib/services/rickAndMortyApi.js');
+jest.mock('../../lib/rickAndMortyApi.js');
 
 describe('get R+M character', () => {
     it('takes an id and returns a character', () => {
