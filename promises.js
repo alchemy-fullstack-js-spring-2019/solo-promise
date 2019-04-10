@@ -4,4 +4,8 @@ const options = {
   encoding: 'utf8'
 };
 
-fsPromises.readFile('./1_promises.md', options);
+const read = () => new Promise((resolve) => {
+  resolve(fsPromises.readFile('./1_promises.md', options));
+});
+
+read().then(data => console.log(data));
