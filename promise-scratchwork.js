@@ -10,7 +10,7 @@ fsPromises.readFile('./1_promises.md', { encoding: 'utf8'})
     });
 
 fsPromises.readFile('./1_promises.md', { encoding: 'utf8'})
-    .then(data => {
+    .then(()=> {
         return fsPromises.readFile('./package.json', { encoding: 'utf8'})
     })
     .then(data => console.log(data))
