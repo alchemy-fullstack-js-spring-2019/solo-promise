@@ -1,4 +1,4 @@
-const transformer = require('../transform');
+const transformer = require('./transform');
 
 describe('transform fn', () => {
   it('takes a file and transforms it to reverse', () => {

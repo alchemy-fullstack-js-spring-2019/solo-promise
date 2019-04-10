@@ -1,5 +1,5 @@
 const fsPromises = require('fs').promises;
-const copy = require('../lib/copy.js');
+const copy = require('./lib/copy.js');
 
 describe('copy function', () => {
   afterEach(() => {
