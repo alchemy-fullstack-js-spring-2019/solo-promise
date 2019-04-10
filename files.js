@@ -12,3 +12,8 @@ fsPromises.readFile('./1_promises.md', 'utf8')
 fsPromises.writeFile('promise-write.md', 'This data will be written to a file')
     .then(() => console.log('DONE!'));
     
+fsPromises.readFile('./1_promises.md', 'utf8')
+    .then(data => {
+        fsPromises.writeFile('promise-copy.md', data);
+    })
+    .then(() => console.log('Did it again!'));
