@@ -1,6 +1,6 @@
 const request = require('superagent');
 
-function getOriginForCharacters(character) {
+function getOriginForCharacters(characters) {
   const deDupedUrls = [...new Set(characters
     .map(character => character.origin.url))];
   return Promise.all(
