@@ -1,0 +1,22 @@
+{
+  "name": "solo-promise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheriPortman/solo-promise.git"
+  },
+  "keywords": [],
+  "author": "Cheri Portman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CheriPortman/solo-promise/issues"
+  },
+  "homepage": "https://github.com/CheriPortman/solo-promise#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
