@@ -6,11 +6,11 @@ const destination = '1_promises-copy.md';
 
 describe('copy function using promises', () => {
   afterEach(() => {
-    fsPromises.unlink(destination);
+    return fsPromises.unlink(destination);
   });
-  
+
   it('copies a file', () => {
-    copy(source, destination)
+    return copy(source, destination)
       .then(() => Promise.all([
         fsPromises.readFile(source),
         fsPromises.readFile(destination)
