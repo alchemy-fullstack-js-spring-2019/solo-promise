@@ -17,3 +17,5 @@ fsPromises.readFile('./.travis.yml', {encoding: 'utf8'})
         console.log('done with copy');
       });
   });
+
+module.exports function 
