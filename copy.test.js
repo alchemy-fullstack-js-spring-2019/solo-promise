@@ -4,7 +4,9 @@ const options = { encoding: 'utf8' };
 
 
 describe('copy promise function testing', () => {
-
+  afterEach(() => {
+    return fsPromises.unlink('./copy.txt');
+  });
   it('does something with promises, probably', () => {
     return copy('./write-by-promise.txt', 'copy.txt')
       .then(() => {
