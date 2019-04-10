@@ -1,10 +1,9 @@
-const fs = require('fs');
 const fsPromises = require('fs').promises;
 const { copy } = require('../lib/copy');
 
 describe('Copy function', () => {
-  beforeEach(done => {
-    fs.unlink('./hi-copy.txt', done);
+  afterEach(() => {
+    return fsPromises.unlink('./hi-copy.txt');
   });
 
   it('can copy a file', () => {
