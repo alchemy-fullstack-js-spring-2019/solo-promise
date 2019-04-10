@@ -6,7 +6,7 @@ describe('Transform function', () => {
     
     transform(src)
       .then(result => {
-        expect(result).toEqual('EREH I');
+        expect(result).toEqual('\nEREH I');
       })
       .catch(err => console.log(err));
   });

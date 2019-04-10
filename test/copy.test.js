@@ -1,21 +1,25 @@
 const copy = require('../copy');
-const fs = require('fs');
-const rimraf = require('rimraf');
+const fsPromises = require('fs').promises;
+
+const options = {
+  encoding: 'utf8'
+};
 
 describe('copy using promise function', () => {
-  const src = './1_promises.md';
-  const dst = './1_promises-copy2.md';
+  const src = './test.txt';
+  const dst = './copy.txt';
+  
   it('copies using fsPromise', () => {
-    copy(src, dst)
+    return copy(src, dst)
       .then(() => {
-        expect(fs.existsSync(dst)).toBeTruthy();
+        return fsPromises.readFile(dst, options);
       })
-      .catch(err => console.log(err));
+      .then(result => {
+        expect(result).toBe('hi there\n');
+      });
   });
 
   afterEach(() => {
-    rimraf(dst, err => {
-      if(err) throw err;
-    });
+    return fsPromises.unlink(dst);
   });
 });

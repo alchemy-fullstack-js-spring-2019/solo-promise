@@ -8,7 +8,7 @@ module.exports = src => {
   return fsPromises.readFile(src, options)
     .then(data => {
       const pattern = /[A-Z]/g;
-      return [...data].filter(letter => !pattern.test(letter)).join('');
+      return data.replace(pattern, '');
     })
     .then(lowerCaseData => {
       return lowerCaseData.toUpperCase();

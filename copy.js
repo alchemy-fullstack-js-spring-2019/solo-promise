@@ -8,6 +8,5 @@ module.exports = (src, dst) => {
   return fsPromises.readFile(src, options)
     .then(data => {
       fsPromises.writeFile(dst, data, options);
-    })
-    .catch(err => console.log(err));
+    });
 };
