@@ -63,6 +63,7 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 * use `then` to wait for the request to resolve and print the output
 * How would you get more than 1 quote?
 * How would you get only quotes by Bender?
+* download: npm i -D superagent 
 
 ## Superagent Again
 
