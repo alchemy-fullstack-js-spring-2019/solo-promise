@@ -4,6 +4,8 @@ const options = { encoding: 'utf8' };
 fsPromises.readFile('./1_promises.md', options)
   .then(data => {
     // console.log(data);
+    fsPromises.writeFile('./1_promises-copy.md', data, options)
+      .then(console.log('Done writing, now what??'));
   });
 
 const data = 'This is a string that will be writed';
