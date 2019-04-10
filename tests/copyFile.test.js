@@ -3,10 +3,19 @@ const copyFile = require('../lib/copyFileFunction'
 const fsPromises = require('fs').promises;
 
 describe('copyFile function', () => {
+    afterEach(() => {
+        return fsPromises.unlink('./1_promises_3.md');
+    });
     it('copies a file', () => {
-        const oldFile = './1_promises.md';
-        const newFile = './1_promises_3.md';
-        const result = copyFile(oldFile, newFile);
-        expect(fsPromises.readFile(result)).toEqual(fsPromises.readFile(oldFile));
+        return copyFile('./1_promises.md', './1_promises_3.md')
+            .then(() => {
+                return Promise.all([
+                    fsPromises.readFile('./1_promises_3.md', { encoding: 'utf8' }),
+                    fsPromises.readFile('./1_promises.md', { encoding: 'utf8' })
+                ]);
+            })
+            .then(([expected, result]) => {
+                expect(result).toEqual(expected);
+            });
     });
 });
