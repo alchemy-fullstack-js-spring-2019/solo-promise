@@ -4,7 +4,9 @@
   "description": "",
   "main": "readFile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose",
+    "test:watch": "npm run test -- --watch",
+    "start": "node lib/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/maybeemily/solo-promise/issues"
   },
-  "homepage": "https://github.com/maybeemily/solo-promise#readme"
+  "homepage": "https://github.com/maybeemily/solo-promise#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1"
+  }
 }
