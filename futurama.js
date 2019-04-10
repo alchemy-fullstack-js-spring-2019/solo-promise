@@ -38,4 +38,15 @@ poopyButthole()
   .then(console.log); 
 
 
+Promise.all([
+  request.get('https://rickandmortyapi.com/api/character/20'),
+  request.get('https://rickandmortyapi.com/api/character/19'),
+  request.get('https://rickandmortyapi.com/api/character/14')
+    .then(([result1, result2, result3]) => {
+      console.log(result1.body, result2.body, result3.body);
+    })
+
+]);
+
+
 
