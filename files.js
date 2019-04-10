@@ -9,3 +9,11 @@ fsPromises.writeFile('write.md', 'this is a test')
   .then(data => {
     console.log('done');
   });
+
+fsPromises.readFile('./.travis.yml', {encoding: 'utf8'})
+  .then(data => {
+    fsPromises.writeFile('copy.md', data)
+      .then(data => {
+        console.log('done with copy');
+      });
+  });
