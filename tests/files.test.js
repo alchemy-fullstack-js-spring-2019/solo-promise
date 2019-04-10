@@ -1,15 +1,20 @@
 const fsPromises = require('fs').promises;
 
 const copy = require('../copy');
+const readFilePromise = require('../readFilePromise');
 
 describe('test copy function', () => {
-  it('reads a file and writes the file', async() => {
+  it('reads a file and writes the file', () => {
 
     const src = './write.md';
     const dest = './copiedTest.md';
 
-    await copy(src, dest);
-    const data = await fsPromises.readFile(dest, { encoding: 'utf8' });
-    expect(data).toEqual('this is a test');
+    return copy(src, dest)
+      .then(() => {
+        return fsPromises.readFile(dest, { encoding: 'utf8' });
+      })
+      .then(data => {
+        expect(data).toEqual('this is a test');
+      });
   });
 });

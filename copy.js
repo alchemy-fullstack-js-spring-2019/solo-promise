@@ -12,3 +12,9 @@ function copy(src, dest) {
 }
 
 module.exports = copy;
+
+
+/*
+return fsPromises.readFile(src)
+  .then(data => fsPromises.writeFile(dst, data));
+*/
