@@ -11,9 +11,9 @@ fsPromises.readFile('./1_promises.md', { encoding: 'utf8' }).then(data => {
     
   });
 
+const dataData = fsPromises.readFile('./1_promises.md', { encoding: 'utf8 '});
 
-
-fsPromises.writeFile('./stuff.text', 'there is a lot of things i could write to be obnoxious', { encoding: 'utf8' }).then(data => {
+fsPromises.writeFile('./stuff.text', 'write somethuing and try not to be obnoxious', { encoding: 'utf8' }).then(data => {
   return data;
 }).then(data => console.log('saved', data)).catch(err => {
     console.log('nope', err);
@@ -35,3 +35,5 @@ Promise.resolve({
   name: 'spot',
   age: 10
 });
+
+
