@@ -98,3 +98,10 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
     expect it to return false
 * `promiseCheck(toCheck)` is a function that
   returns `true` if toCheck is a promise.
+
+- could check whether the return is resolvable;
+- could check whether return has .then method and see what type of .then. we think promise is an object with a .then prop.
+- the internet says Promise is a class and .then is a method?
+
+
+

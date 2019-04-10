@@ -11,7 +11,7 @@ const request = require('superagent');
 //   .then(result => console.log(result));
 
 request.get('https://rickandmortyapi.com/api/character/')
-  .then(results => results.body)
+  .then(response => response.body)
   .then(results => {
     return results.results.map(result => result.origin.url);
   })
@@ -21,7 +21,7 @@ request.get('https://rickandmortyapi.com/api/character/')
   .then(urls => {
     return Promise.all(
       urls.map((url) => {
-        return request.get(url).then(res => res.body);
+        return request.get(url).then(res => res.body.name);
       })
     );
   })  
