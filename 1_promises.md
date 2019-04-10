@@ -45,17 +45,6 @@
   * invoke your transform function
   * `then` expect that the result is what you think it should be
 
-## Is it a promise
-
-* write a `promiseCheck.js` and `promiseCheck.test.js`
-* test
-  * pass a promise to `promiseCheck` and
-    expect it to return true
-  * pass a non-promise to `promiseCheck` and
-    expect it to return false
-* `promiseCheck(toCheck)` is a function that
-  returns `true` if toCheck is a promise.
-
 ## Create a promise
 
 * require `const fs = require('fs')`
@@ -67,6 +56,15 @@
   * reject with the error from reading the file
 
 ## Superagent
+
+Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi.herokuapp.com)
+
+* use `superagent` to make a `get` request to http://futuramaapi.herokuapp.com/api/quotes/1
+* use `then` to wait for the request to resolve and print the output
+* How would you get more than 1 quote?
+* How would you get only quotes by Bender?
+
+## Superagent Again
 
 * use `superagent` to make a `get` request to https://rickandmortyapi.com/api/character/
 * use `then` to wait for the request to resolve and print the output
@@ -89,3 +87,14 @@
 
 * use `jest.mock` to mock your `rickAndMortyApi.js`
   * Use `Promise.resolve` to return a promise that resolves with some data
+
+## BONUS: Is it a promise?
+
+* write a `promiseCheck.js` and `promiseCheck.test.js`
+* test
+  * pass a promise to `promiseCheck` and
+    expect it to return true
+  * pass a non-promise to `promiseCheck` and
+    expect it to return false
+* `promiseCheck(toCheck)` is a function that
+  returns `true` if toCheck is a promise.
