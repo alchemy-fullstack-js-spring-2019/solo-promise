@@ -2,15 +2,15 @@
 
 ## Read a file
 
-* require `const fsPromises = require('fs').promises;`
-* use `fsPromises.readFile` to read a file
-* `then` `console.log` the file
+<!-- * require `const fsPromises = require('fs').promises;` -->
+<!-- * use `fsPromises.readFile` to read a file -->
+<!-- * `then` `console.log` the file -->
 
 ## Write a file
 
-* require `const fsPromises = require('fs').promises;`
-* use `fsPromises.writeFile` to write a file
-* `then` `console.log` "DONE!"
+<!-- * require `const fsPromises = require('fs').promises;` -->
+<!-- * use `fsPromises.writeFile` to write a file -->
+<!-- * `then` `console.log` "DONE!" -->
 
 ## Copy a file
 
@@ -47,8 +47,8 @@
 
 ## Create a promise
 
-* require `const fs = require('fs')`
-  * NOT THE PROMISE fs
+<!-- * require `const fs = require('fs')` -->
+  <!-- * NOT THE PROMISE fs -->
 * create a readPromise function
   * use `new Promise((resolve, reject) => {})` to create a new promise
   * use `fs.readFile` to read a file
@@ -59,8 +59,8 @@
 
 Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi.herokuapp.com)
 
-* use `superagent` to make a `get` request to http://futuramaapi.herokuapp.com/api/quotes/1
-* use `then` to wait for the request to resolve and print the output
+<!-- * use `superagent` to make a `get` request to http://futuramaapi.herokuapp.com/api/quotes/1 -->
+<!-- * use `then` to wait for the request to resolve and print the output -->
 * How would you get more than 1 quote?
 * How would you get only quotes by Bender?
 
