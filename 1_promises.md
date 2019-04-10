@@ -76,6 +76,8 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 * make another `get` request to retrieve the origin of each character
   * HINT: use `Promise.all`
 
+
+
 ## write a service
 
 * write a `rickAndMortyApi.js` and `rickAndMortyApi.test.js` file
