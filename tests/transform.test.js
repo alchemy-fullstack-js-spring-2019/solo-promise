@@ -5,6 +5,9 @@ describe('transform function', () => {
     it('removes all capital letters, changes all to capital, then reverses string', () => {
         const src = './megan_2.md';
         const result = transform(src);
-        expect(fsPromises.readFile(result)).toEqual('NAGEM SI EMAN YM OLLEH');
+        fsPromises.readFile(src, { encoding: 'utf8' })
+            .then(data => {
+                expect(data).toEqual('NAGE SI EMAN YM OLLE');
+            });
     });
 });
