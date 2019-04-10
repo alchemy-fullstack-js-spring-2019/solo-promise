@@ -3,12 +3,15 @@ const fsPromises = require('fs').promises;
 
 describe('copy a file using promises', () => {
     it('copies src file to dest', () => {
-        return copy('./promise-copy.md', './yet-another-promise-copy.md')
+        return copy('./lib/dog.md', './dog-copy.md')
             .then(() => {
-                return fsPromises.readFile('./yet-another-promise-copy.md', 'utf8');
+                return Promise.all([
+                    fsPromises.readFile('./lib/dog.md', 'utf8'),
+                    fsPromises.readFile('./dog-copy.md', 'utf8')
+                ]);
             })
-            .then(result => {
-                expect(result).toBeTruthy();
+            .then(([expected, result]) => {
+                expect(expected).toEqual(result);
             });      
     });
 });
