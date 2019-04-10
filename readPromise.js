@@ -12,6 +12,6 @@ function readPromise(src) {
   });
 }
 
-
-readPromise('./write-by-promise.txt')
-  .then(console.log);
+module.exports = readPromise;
+// readPromise('./write-by-promise.txt')
+//   .then(console.log);
