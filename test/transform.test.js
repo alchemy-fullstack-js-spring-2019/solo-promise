@@ -1,5 +1,4 @@
 const transform = require('../lib/transform');
-const fsPromises = require('fs').promises;
 
 describe('transform file text', () => {
     it('transforms the contents of a file', () => {
