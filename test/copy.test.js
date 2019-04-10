@@ -12,7 +12,7 @@ describe('Copy function', () => {
         return fsPromises.readFile('./hi-copy.txt', { encoding: 'utf8' });
       })
       .then(result => {
-        expect(result).toEqual('Hi\n');
+        expect(result).toEqual('hi\n');
       });
   });
 });
