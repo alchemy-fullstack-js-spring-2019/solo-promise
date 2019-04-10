@@ -12,8 +12,19 @@ function getQuote() {
     .get('http://futuramaapi.herokuapp.com/api/quotes/1')
     .then(res => 
       res.body);
-    // .then(console.log);
 }
 
 getQuote()
   .then(console.log);
+
+function getCharacterQuote() {
+  return request
+    .get('http://futuramaapi.herokuapp.com/api/characters/${character}/1')
+    .then(res => 
+      res.body);
+}
+
+getCharacterQuote('bender', 1)
+  .then(console.log);
+
+  
