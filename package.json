@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "files.js",
-  "dependencies": {},
+  "dependencies": {
+    "superagent": "^5.0.2"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "jest": "^24.7.1"
