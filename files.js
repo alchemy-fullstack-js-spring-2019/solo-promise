@@ -9,13 +9,13 @@ fsPromises.readFile('./1_promises.md', { encoding: 'utf8' }).then(data => {
     console.log(err);
   });
 
-Promise.all([
-  fsPromises.readFile('/1_promises.md', { encoding: 'utf8' }),
-  fsPromises.readFile('/package.json', { encoding: 'utf8' }),
-  fsPromises.readFile('/files.js', { encoding: 'utf8' })
-]);
+// Promise.all([
+//   fsPromises.readFile('/1_promises.md', { encoding: 'utf8' }),
+//   fsPromises.readFile('/package.json', { encoding: 'utf8' }),
+//   fsPromises.readFile('/files.js', { encoding: 'utf8' })
+// ]);
 
-.then(([promises]));
+// .then(([promises]));
 
 Promise.resolve({
     name: 'spot',
