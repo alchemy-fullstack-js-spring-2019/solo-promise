@@ -8,4 +8,3 @@ describe('transformer function', () => {
       });
   });
 });
-

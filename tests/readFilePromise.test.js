@@ -8,4 +8,3 @@ describe('read promise', () => {
       });
   });
 });
- 
