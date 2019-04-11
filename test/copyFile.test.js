@@ -3,9 +3,9 @@ const fsPromises = require('fs').promises;
 
 describe('copy file test', ()=> {
 
-    // afterEach(()=> 
-    //     fsPromises.unlink('./writtenfileCOPY.txt')
-    // );
+    // afterEach(() => {
+    //     return fsPromises.unlink('./writtenfileCOPY.txt');
+    // });
 
     it('function read a file and copy it', () => {
         return copy('./writtenfile.txt', './writtenfileCOPY.txt')
