@@ -1,4 +1,3 @@
-const fsPromises = require('fs').promises;
 const fs = require('fs');
 
 function readFilePromise(src) {
