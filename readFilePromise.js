@@ -9,8 +9,4 @@ function readFilePromise(src) {
   });
 }
 
-readFilePromise('./write.md')
-  .then(data => console.log('success', data))
-  .then(err => console.log('error', err));
-
 module.exports = readFilePromise;
