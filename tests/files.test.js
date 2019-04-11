@@ -1,7 +1,7 @@
 const fsPromises = require('fs').promises;
 
-const copy = require('../copy');
-const readFilePromise = require('../readFilePromise');
+const copy = require('../lib/copy');
+// const readFilePromise = require('../readFilePromise');
 
 describe('test copy function', () => {
   it('reads a file and writes the file', () => {

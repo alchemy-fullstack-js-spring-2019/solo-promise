@@ -1,4 +1,4 @@
-const readFilePromise = require('../readFilePromise');
+const readFilePromise = require('../lib/readFilePromise');
 
 describe('read promise', () => {
   it('reads a file', () => {
@@ -8,3 +8,4 @@ describe('read promise', () => {
       });
   });
 });
+ 
