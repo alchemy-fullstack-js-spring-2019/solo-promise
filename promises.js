@@ -23,31 +23,21 @@ const fsPromises = require('fs').promises;
 //     .then();
 // }
 
+function copy(source, dest) {
+  return fsPromises.readFile(source)
+    .then(res => {
+      fsPromises.writeFile(res, dest, 'utf8');
+    }) 
+    .then(console.log('done!'));
+  // .then(([promisePackageJson, promisePromisesMd]) => console.log(promisePackageJson, promisePromisesMd))
+  // .catch(err => {
+  //   console.error(err);
+  // });
+}
+copy('./package.json', './oneCopyDemo.md');
 
-
-// function copy(source, dest) {
-//   return fsPromises.readFile(source)
-//     .then(res => {
-//       fsPromises.writeFile(res, dest, 'utf8');
-//     }) 
-//     .then(console.log('done!'))
-//     // .then(([promisePackageJson, promisePromisesMd]) => console.log(promisePackageJson, promisePromisesMd))
-//     .catch(err => {
-//       console.error(err);
-//     });
-// }
-// copy('./package.json', './oneCopyDemo.md');
-
-// function aCopy({
-//   readIt = fsPromises.readFile(source, { encoding: 'utf8' }),
-//   writeIt = fsPromises.writeFile(source, dest, 'utf8'),
-//   .then(readIt),
-//   .then(writeIt),
-//   return writeIt
-// })
-
-module.exports = {
-  //read,
-  //write,
-  copy
-};
+// module.exports = {
+//   //read,
+//   //write,
+//   copy
+// };

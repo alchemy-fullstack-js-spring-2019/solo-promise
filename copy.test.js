@@ -1,11 +1,22 @@
-const copy = require('./copy.js');
 const fsPromises = require('fs').promises;
+const copy = require('./copy.js');
 
-describe('it can copy', () => {
+describe('copy function', () => {
+
   afterEach(() => {
-    return fsPromises.unlink('./copyDemo.json');
+    return fsPromises.unlink('./copy.txt');
   });
+
   it('can copy a file', () => {
-    return copy('./package.json', './copyDemo.json');
+    return copy('./package.json', './copy.txt')
+      .then(() => {
+        return Promise.all([
+          fsPromises.readFile('./package.json', { encoding: 'utf8' }),
+          fsPromises.readFile('./copy.txt', { encoding: 'utf8' })
+        ]);
+      })
+      .then(() => {
+        expect('./copy.txt');
+      });
   });
 });

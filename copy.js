@@ -1,10 +1,8 @@
 const fsPromises = require('fs').promises;
-const { write } = require('./promises.js');
 
 function copy(source, dest) {
   return fsPromises.readFile(source)
-    .then(res => {
-      write(res, dest, 'utf8');
-    }); 
+    .then(data => fsPromises.writeFile(dest, data));
 }
-module.exports = copy();
+
+module.exports = copy;
