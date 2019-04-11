@@ -23,6 +23,7 @@
     "jest": "^24.7.1"
   },
   "dependencies": {
+    "babel": "^6.23.0",
     "superagent": "^5.0.2"
   }
 }

@@ -3,10 +3,6 @@ const fsPromises = require('fs').promises;
 
 describe('copy function', () => {
 
-  // afterEach(() => {
-  //   return fsPromises.unlink('../lib/copy.txt');
-  // });
-
   it('can copy a file', () => {
     return copy('./lib/interestingtext.txt', './lib/copy.txt')
       .then(() => {

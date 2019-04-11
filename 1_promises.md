@@ -14,14 +14,14 @@
 
 ## Copy a file
 
-* require `const fsPromises = require('fs').promises;`
-* use `fsPromises.readFile` to read a file
-* `then` use `fsPromises.writeFile` to write the read data
-* `then` `console.log` "DONE!"
+<!-- * require `const fsPromises = require('fs').promises;` -->
+<!-- * use `fsPromises.readFile` to read a file -->
+<!-- * `then` use `fsPromises.writeFile` to write the read data
+* `then` `console.log` "DONE!" -->
 
 ## Copy a file
 
-* create and export a `copy(src, dst)` function
+<!-- * create and export a `copy(src, dst)` function
   * require `const fsPromises = require('fs').promises;`
   * use `fsPromises.readFile` to read a file
   * `then` use `fsPromises.writeFile` to write the read data
@@ -31,13 +31,13 @@
   * NOTE: you don't need to use `done()`. if your test returns a promise
     jest will wait for the promise to resolve
   * invoke your copy function
-  * `then` expect that the new file exists
+  * `then` expect that the new file exists -->
 
 ## Transformer
 
 * create and export a `transform(src)` function
-  * require `const fsPromises = require('fs').promises;`
-  * use `fsPromises.readFile` to read a file
+  <!-- * require `const fsPromises = require('fs').promises;` -->
+  <!-- * use `fsPromises.readFile` to read a file -->
   * `then` remove all capital letters
   * `then` make all letters capital
   * `then` reverse the string
