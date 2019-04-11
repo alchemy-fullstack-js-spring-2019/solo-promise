@@ -1,12 +1,10 @@
-const fsPromises = require('fs').promises;
-const transform = require('../lib/transform');
+const transformer = require('../lib/transform');
 
 describe('transform function', () => {
     it('removes all capital letters, changes all to capital, then reverses string', () => {
-        return transform('../megan_2.md')
+        return transformer('./megan.txt')
             .then(transformedData => {
-                expect(transformedData).toEqual('NAGE SI EMAN YM OLLE');
+                expect(transformedData).toEqual('\nOLLE');
             });
-            console.log(transform())
     });
 });
