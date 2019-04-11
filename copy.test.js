@@ -11,7 +11,7 @@ describe('copy function', () => {
     return copy('./package.json', './copy.txt')
       .then(() => {
         return Promise.all([
-          fsPromises.readFile('./package.json', { encoding: 'utf8' }),
+          fsPromises.readFile('./test.txt', { encoding: 'utf8' }),
           fsPromises.readFile('./copy.txt', { encoding: 'utf8' })
         ]);
       })

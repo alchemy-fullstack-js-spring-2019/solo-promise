@@ -1,43 +1,35 @@
 const fsPromises = require('fs').promises;
+const fs = require('fs');
 
-// const read = fsPromises.readFile('./package.json', { encoding: 'utf8' })
-//   .then(data => {
-//     return Promise.all([
-//       Promise.resolve(data),
-//       fsPromises.readFile('./package.json', { encoding: 'utf8' })
-//     ]);
-//   })
-//   .then(([promisePackageJson, promisePromisesMd]) => console.log(promisePackageJson, promisePromisesMd))
-//   .catch(err => {
-//     console.error(err);
-//   });
+const readPromise = src => new Promise((resolve, reject) => {
+  fs.readFile(src, { encoding: 'utf8' }, (err, data) => {
+    if(err) return reject(err);
+    //console.log(fs.readFile(src));
+    resolve(data);
+  });
+});
+readPromise('./oneReadDemo.txt')
+  .then(data => console.log(data));
 
-// const write = fsPromises.writeFile('write.json', 'Write it here in JSON', 'utf8')
-//   .then(() => {
-//     console.log('Ok');
-//   })
-//   .catch(console.log());
-
-// function dynamicWrite(source, data) {
-//   return fsPromises.writeFile(src, data)
-//     .then();
-// }
+function write(source, dest) {
+  return fsPromises.writeFile(source, dest)
+    .then(console.log('write done!'));
+}
+write('1_promises.md', 'oneWriteDemo.txt');
 
 function copy(source, dest) {
   return fsPromises.readFile(source)
-    .then(res => {
-      fsPromises.writeFile(res, dest, 'utf8');
-    }) 
-    .then(console.log('done!'));
-  // .then(([promisePackageJson, promisePromisesMd]) => console.log(promisePackageJson, promisePromisesMd))
-  // .catch(err => {
-  //   console.error(err);
-  // });
+    .then(data => fsPromises.writeFile(dest, data))
+    .then(console.log('copy done!'));
 }
-copy('./package.json', './oneCopyDemo.md');
+copy('1_promises.md', 'oneCopyDemo.txt');
 
-// module.exports = {
-//   //read,
-//   //write,
-//   copy
-// };
+const readFilePromise = new Promise((resolve, reject) => {
+  fs.readFile('./1_promises.md', { encoding: 'utf8' }, (err, data) => {
+    if(err) return reject(err);
+    console.log('read done!', data.valueOf());
+
+    resolve(data.valueOf());
+  });
+});
+module.exports = readFilePromise;

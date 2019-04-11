@@ -23,6 +23,20 @@ const request = require('superagent');
 //   .then(getOriginForCharacters)
 //   .then(console.log());
 
+function read(src) {
+
+  return fsPromises.readFile(src, { encoding: 'utf8' })
+   .then(data => {
+     return Promise.all([
+       Promise.resolve(data),
+       fsPromises.readFile(src, { encoding: 'utf8' })
+     ]);
+   })
+   .then(([promisePackageJson, promisePromisesMd]) => console.log(promisePackageJson, promisePromisesMd))
+   .catch(err => {
+     console.error(err);
+   });
+
 //VERSION 1
 request 
   .get('https://rickandmortyapi.com/api/character/')
