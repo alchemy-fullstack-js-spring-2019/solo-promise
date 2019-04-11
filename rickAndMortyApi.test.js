@@ -1,4 +1,4 @@
-const { getCharacter } = require('./lib/services/rickAndMortyApirickAndMortyApi');
+const { getCharacter } = require('./lib/services/rickAndMortyApi');
 
 jest.mock('./lib/services/rickAndMortyApi.js');
 
