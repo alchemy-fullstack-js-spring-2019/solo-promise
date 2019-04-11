@@ -76,12 +76,12 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 * make another `get` request to retrieve the origin of each character
   * HINT: use `Promise.all` -->
 
-## write a service
+<!-- ## write a service
 
 * write a `rickAndMortyApi.js` and `rickAndMortyApi.test.js` file
 * export a function `getCharacter` that takes an id and returns a promise that resolves to a character
   * return only the characters name, status, and species
-* **WRITE YOUR TESTS FIRST**
+* **WRITE YOUR TESTS FIRST** -->
 
 ## Mocks
 
