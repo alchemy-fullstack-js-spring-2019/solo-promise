@@ -1,5 +1,5 @@
 const fs = require('fs');
-const readProimse = require('./readPromise');
+const readPromise = require('./readPromise');
 
 describe('read promise', () => {
   it('reads a file', () => {
@@ -9,7 +9,6 @@ describe('read promise', () => {
       });
   });
 });
-
 
 
 // describe('promise function tests', () => {

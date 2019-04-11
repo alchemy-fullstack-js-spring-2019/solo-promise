@@ -61,13 +61,13 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 
 <!-- * use `superagent` to make a `get` request to http://futuramaapi.herokuapp.com/api/quotes/1 -->
 <!-- * use `then` to wait for the request to resolve and print the output -->
-* How would you get more than 1 quote?
-* How would you get only quotes by Bender?
+<!-- * How would you get more than 1 quote? -->
+<!-- * How would you get only quotes by Bender? -->
 
 ## Superagent Again
 
-* use `superagent` to make a `get` request to https://rickandmortyapi.com/api/character/
-* use `then` to wait for the request to resolve and print the output
+<!-- * use `superagent` to make a `get` request to https://rickandmortyapi.com/api/character/ -->
+<!-- * use `then` to wait for the request to resolve and print the output -->
 
 ## Promise.all
 
