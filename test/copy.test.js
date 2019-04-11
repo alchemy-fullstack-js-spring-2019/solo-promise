@@ -14,7 +14,7 @@ describe('copy tests', () => {
       })
       .then(result => {
         expect(result).toEqual(fs.readFileSync('./package.json', 'utf8'));
-        fsPromises.unlink('./copy.txt')
+        fsPromises.unlink('./copy.txt');
       });
     
   });
