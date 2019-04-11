@@ -12,7 +12,7 @@ describe('copy function', () =>{
       .then(() => {
         return Promise.all([
           fsPromises.readFile('./stuff.text', { encoding: 'utf8' }),
-          fsPromises.readFile('./something.txt', { encoding: 'utf8'})
+          fsPromises.readFile('./something.txt', { encoding: 'utf8' })
         ]);
         
       })
