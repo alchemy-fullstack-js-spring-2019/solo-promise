@@ -1,13 +1,13 @@
-const { getCharacter } = require('./rickAndMortyServices.');
+const { getCharacter } = require('./lib/services/rickAndMortyApirickAndMortyApi');
 
-
+jest.mock('./lib/services/rickAndMortyApi.js');
 
 describe('rick and morty service', () => {
   it('can get a character by id', () => {
     return getCharacter(1)
       .then(character => {
         expect(character).toEqual({
-          name: 'Rick Sanchez',
+          name: 'Morty Smith',
           species: 'Human',
           status: 'Alive'
         });
