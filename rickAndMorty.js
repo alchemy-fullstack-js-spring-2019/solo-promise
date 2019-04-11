@@ -6,12 +6,11 @@ function getOriginForCharacters(characters) {
     return Promise.all(
         dedupedUrl
             .filter(url => url !== '')
-            .map(url => request.get(url).then(res => res.body))
+            .map(url => request.get(url).then(res => res.body.name))
     );
 }
 
 getOriginForCharacters();
-
 
 request
     .get('https://rickandmortyapi.com/api/character/')
