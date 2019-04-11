@@ -20,9 +20,9 @@ superagent
 
 superagent
   .get('https://rickandmortyapi.com/api/character/')
-  .then(res => res.body)
+  .then(res => res.body.results)
   .then(characters => {
-    return characters.results.map(character => character.origin.url);
+    return characters.map(character => character.origin.url);
   })
   .then(urlArray => {
     return urlArray.filter(location => location !== '');
