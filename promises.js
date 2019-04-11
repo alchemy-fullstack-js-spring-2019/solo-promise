@@ -4,7 +4,7 @@ const fs = require('fs');
 const readPromise = src => new Promise((resolve, reject) => {
   fs.readFile(src, { encoding: 'utf8' }, (err, data) => {
     if(err) return reject(err);
-    //console.log(fs.readFile(src));
+    console.log('I read and create a new Promise, and I am done!');
     resolve(data);
   });
 });
@@ -23,13 +23,3 @@ function copy(source, dest) {
     .then(console.log('copy done!'));
 }
 copy('1_promises.md', 'oneCopyDemo.txt');
-
-const readFilePromise = new Promise((resolve, reject) => {
-  fs.readFile('./1_promises.md', { encoding: 'utf8' }, (err, data) => {
-    if(err) return reject(err);
-    console.log('read done!', data.valueOf());
-
-    resolve(data.valueOf());
-  });
-});
-module.exports = readFilePromise;
