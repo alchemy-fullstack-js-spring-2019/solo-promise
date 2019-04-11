@@ -33,7 +33,7 @@
   * invoke your copy function
   * `then` expect that the new file exists
 
-## Transformer
+## Transformer DONE
 
 * create and export a `transform(src)` function
   * require `const fsPromises = require('fs').promises;`
@@ -45,7 +45,7 @@
   * invoke your transform function
   * `then` expect that the result is what you think it should be
 
-## Create a promise
+## Create a promise DONE
 
 * require `const fs = require('fs')`
   * NOT THE PROMISE fs
@@ -55,7 +55,7 @@
   * resolve with the data from the file
   * reject with the error from reading the file
 
-## Superagent
+## Superagent DONE
 
 Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi.herokuapp.com)
 
@@ -64,7 +64,7 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 * How would you get more than 1 quote?
 * How would you get only quotes by Bender?
 
-## Superagent Again
+## Superagent Again DONE
 
 * use `superagent` to make a `get` request to https://rickandmortyapi.com/api/character/
 * use `then` to wait for the request to resolve and print the output
