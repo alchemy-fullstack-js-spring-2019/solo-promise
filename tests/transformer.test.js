@@ -1,11 +1,11 @@
-import { isTSAnyKeyword, exportAllDeclaration } from '@babel/types';
-import { ScriptTransformer } from 'jest-runtime';
+const transformer = require('../transformer');
 
 describe('transformer function', () => {
-  isTSAnyKeyword('reads a file and transforms it', () => {
-    return ScriptTransformer('./write.md')
-      .then(trnasformedData => {
-        expect(transformedData).toEqual('IH');
-      })
-  }
-})
+  it('reads a file and transforms it', () => {
+    return transformer('./transform.txt')
+      .then(transformedData => {
+        expect(transformedData).toContain('\nTSET A SI SIHT');
+      });
+  });
+});
+

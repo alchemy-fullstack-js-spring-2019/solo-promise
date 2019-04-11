@@ -1,7 +1,25 @@
 const request = require('superagent');
 
+function getOriginForCharacters(characters) {
+  return Promise.all(
+    characters 
+      .map(character => character.origin.url)
+      .filter(url => url !== '')
+      .map(url => request.get(url).then(res => res.body))
+  );
+}
+
 request
-  .get('http://futuramaapi.herokuapp.com/api/quotes/1')
-  .then(res => {
-    console.log(res.body);
-  });
+  .get('https://rickandmortyapi.com/api/character/')
+  .then(res => res.body.results)
+  .then(getOriginForCharacters)
+  // .then(characters => characters.map(character => character.origin.url))
+  // .then(characterLocationUrls => characterLocationUrls.filter(url => url !== ''))
+  // .then(characterLocationUrls => {
+  //   return Promise.all(characterLocationUrls.map(url => {
+  //     return request.get(url).then(res => res.body);
+  //   }));
+  // })
+  .then(console.log);
+  
+    
