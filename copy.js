@@ -7,4 +7,4 @@ function copy(source, dest) {
       write(res, dest, 'utf8');
     }); 
 }
-copy('./package.json', './copyDemo.json');
+module.exports = copy();

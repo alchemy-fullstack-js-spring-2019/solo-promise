@@ -3,16 +3,9 @@ const fsPromises = require('fs').promises;
 
 describe('it can copy', () => {
   afterEach(() => {
-    return fsPromises.unlink('./copy.txt');
+    return fsPromises.unlink('./copyDemo.json');
   });
-
   it('can copy a file', () => {
-    return copy('./test.txt', './copy.txt')
-      .then(() => {
-        return; 
-      });
+    return copy('./package.json', './copyDemo.json');
   });
-
 });
-
-
