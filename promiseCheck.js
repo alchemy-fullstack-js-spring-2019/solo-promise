@@ -1,3 +1,4 @@
 module.exports = promise => {
-  return true;
+  if(promise instanceof Promise) return true;
+  return false;
 };
