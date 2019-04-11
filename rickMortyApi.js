@@ -16,3 +16,4 @@ request
   .then(getOriginCharacters);
   
 
+module.exports = { getOriginCharacters };
