@@ -4,9 +4,9 @@ describe('see if read filePromise works', ()=>{
     it('give readFilePromise a src, see if proise works', ()=>{
 
 
-        return readFilePromise('../copy-file.test.txt')
+        return readFilePromise('./test.txt')
             .then(data=>{
-                expect(data).toEqual('hi\n');
+                expect(data).toBe('Hhi');
             })
 
     })
