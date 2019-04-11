@@ -1,9 +1,25 @@
-import { forStatement } from "@babel/types";
+const fsPromises = require('fs').promises;
 
-forStatement.promises.readFile('./README.md', { encoding : 'uff8'})
-.then(data=>{
-    return data.replace(/[A-Z]/g, '');
-})
-.then(data => data.toUpperCase())
-.then(data => [...data].reverse().join(''))
-.then(data => console.log);
+
+
+function transformer(src){
+    return fsPromises.readFile(src, { encoding : 'utf8'})
+    .then(data => data.replace(/[A-Z]/g, ''))
+    .then(data => data.toUpperCase())
+    .then(data=> [...data].reverse().join(''))
+    .then(data =>{
+        return data
+    });
+}
+
+
+module.exports = transformer;
+
+
+
+
+
+   
+  
+  
+

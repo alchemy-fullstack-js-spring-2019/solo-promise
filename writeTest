@@ -1,25 +1,25 @@
 # Promises
 
-## Read a file
+## Read a file DONE
 
 * require `const fsPromises = require('fs').promises;`
 * use `fsPromises.readFile` to read a file
 * `then` `console.log` the file
 
-## Write a file
+## Write a file DONE
 
 * require `const fsPromises = require('fs').promises;`
 * use `fsPromises.writeFile` to write a file
 * `then` `console.log` "DONE!"
 
-## Copy a file
+## Copy a file DONE
 
 * require `const fsPromises = require('fs').promises;`
 * use `fsPromises.readFile` to read a file
 * `then` use `fsPromises.writeFile` to write the read data
 * `then` `console.log` "DONE!"
 
-## Copy a file
+## Copy a file DONE
 
 * create and export a `copy(src, dst)` function
   * require `const fsPromises = require('fs').promises;`
