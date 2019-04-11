@@ -1,0 +1,28 @@
+{
+  "name": "solo-promise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "files.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alchemy-fullstack-js-spring-2019/solo-promise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alchemy-fullstack-js-spring-2019/solo-promise/issues"
+  },
+  "homepage": "https://github.com/alchemy-fullstack-js-spring-2019/solo-promise#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "superagent": "^5.0.2"
+  }
+}
