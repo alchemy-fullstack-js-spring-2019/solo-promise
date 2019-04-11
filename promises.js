@@ -1,9 +1,24 @@
 const fsPromises = require('fs').promises;
 
-fsPromises.writeFile('write.json', 'Write it here in JSON', 'utf8')
-  .then(file => {
-    console.log(file);
+const read = fsPromises.readFile('./package.json', { encoding: 'utf8' })
+  .then(data => {
+    return Promise.all([
+      Promise.resolve(data),
+      fsPromises.readFile('./package.json', { encoding: 'utf8' })
+    ]);
   })
+  .then(([promisePackageJson, promisePromisesMd]) => console.log(promisePackageJson, promisePromisesMd))
   .catch(err => {
-    console.log(err);
+    console.error(err);
   });
+
+const write = fsPromises.writeFile('write.json', 'Write it here in JSON', 'utf8')
+  .then(() => {
+    console.log('Ok');
+  })
+  .catch(console.log());
+
+module.exports = {
+  read,
+  write
+};
