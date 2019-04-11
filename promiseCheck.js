@@ -1,10 +1,7 @@
 const request = require('superagent');
 
 function promiseCheck(toCheck) {
-  if(typeof toCheck === 'object' && typeof toCheck.then === 'function'){
-    return true;
-  }
-  else {return false;}
+  return toCheck instanceof Promise;
 }
 
 module.exports = promiseCheck;
