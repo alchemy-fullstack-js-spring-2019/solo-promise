@@ -76,6 +76,8 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 * make another `get` request to retrieve the origin of each character
   * HINT: use `Promise.all`
 
+
+
 ## write a service
 
 * write a `rickAndMortyApi.js` and `rickAndMortyApi.test.js` file
@@ -85,7 +87,7 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 
 ## Mocks
 
-* use `jest.mock` to mock your `rickAndMortyApi.js`
+* use `jest.mock` to mock your `rickAndMortyApi.js` //the mock is you're mocking the api
   * Use `Promise.resolve` to return a promise that resolves with some data
 
 ## BONUS: Is it a promise?
