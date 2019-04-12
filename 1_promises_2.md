@@ -66,7 +66,6 @@ Use the Futurama Quote API [http://futuramaapi.herokuapp.com](http://futuramaapi
 
 ## Superagent Again
 
-
 * use `superagent` to make a `get` request to https://rickandmortyapi.com/api/character/
 * use `then` to wait for the request to resolve and print the output
 
