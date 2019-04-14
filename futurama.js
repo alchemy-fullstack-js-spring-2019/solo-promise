@@ -33,6 +33,7 @@ const request = require('superagent');
 // fulfilled - finished and resolved
 // rejected - finished and rejected
 
+
 //modeling from ryan's example
 
 function getPromiseAll(character) {
