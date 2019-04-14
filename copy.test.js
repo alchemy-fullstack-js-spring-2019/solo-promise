@@ -4,6 +4,7 @@ const copy = require('./copy.js');
 describe('copy function', () => {
 
   afterEach(() => {
+    // eslint-disable-next-line
     return fsPromises.unlink('./copy.txt');
   });
 
