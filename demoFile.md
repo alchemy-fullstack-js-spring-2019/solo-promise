@@ -1,5 +1,5 @@
 oooooooOOOOOOOO!
-//above started as lowercase to uppercase
+
 {
   "name": "solo-promise",
   "version": "1.0.0",
