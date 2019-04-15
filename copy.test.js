@@ -1,4 +1,6 @@
 const fsPromises = require('fs').promises;
+
+
 const copy = require('./copy.js');
 
 describe('copy function', () => {
@@ -11,7 +13,7 @@ describe('copy function', () => {
   it('can copy a text file', () => {
     return copy('./test.txt', './copy.txt')
       .then(() => {
-        return fsPromises.readFile('copy.txt', { encoding: 'utf8' });
+        return fsPromises.readFile('./copy.txt', { encoding: 'utf8' });
       })
       .then(data => {
         expect(data).toContain('Test data for copy function.');
