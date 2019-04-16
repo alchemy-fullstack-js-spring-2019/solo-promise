@@ -3,7 +3,7 @@ const promiseCheck = require('./promiseCheck');
 
 describe('promiseCheck', () => {
   // it('returns true if it is a promise', () => {
-  //   expect(promiseCheck(fsPromises.readFile('./transform.js'))).toEqual(true); //.toBeTruthy();
+  //   expect(promiseCheck(fsPromises.readFile('./transform.js'))).toBeTruthy(); //.toEqual(true);
   // });
 
   it('returns false if it is not a promise', () => {
