@@ -9,13 +9,13 @@ describe('copy function', () => {
     console.log(fsPromises, copy);
   });
 
-  it('can copy a text file', () => {
-    return copy('./test.txt', './copyTo.txt')
-      .then(() => {
-        return fsPromises.readFile('./copyTo.txt', 'utf8');//{ encoding: 'utf8' });
-      })
-      .then(data => {
-        expect(data).toContain('Test data for copy function.');
-      });
-  });
+  // it('can copy a text file', () => {
+  //   return copy('./test.txt', './copyTo.txt')
+  //     .then(() => {
+  //       return fsPromises.readFile('./copyTo.txt', { encoding: 'utf8' });
+  //     })
+  //     .then(data => {
+  //       expect(data).toContain('Test data for copy function.');
+  //     });
+  // });
 });
